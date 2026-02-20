@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
+  <div class="mobile-cta">
+  <a class="btn" href="index.html#contact">Request Consultation</a>
+</div>
+
   <body>
     <header class="site-header">
       <div class="container nav">
@@ -116,29 +120,30 @@
             <p>Send a brief message. You’ll receive a confidential reply.</p>
           </div>
 
-          <form class="form" onsubmit="return false;">
+          <form class="form" action="https://formspree.io/f/mnjbbvgb" method="POST">
+            <input type="hidden" name="_redirect" value="https://yourdomain.com/thanks.html" 
             <div class="form-row">
               <label>
                 Name
-                <input type="text" placeholder="Your name" />
+                <input type="text" name="name" placeholder="Your name" required />
               </label>
+
               <label>
                 Email
-                <input type="email" placeholder="you@example.com" />
+                <input type="email" name="email" placeholder="you@example.com" required />
               </label>
             </div>
 
             <label>
               Message
-              <textarea rows="5" placeholder="What dates, location, and coverage are you looking for?"></textarea>
+              <textarea name="message" rows="5" placeholder="What dates, location, and coverage are you looking for?"></textarea>
             </label>
 
             <button class="btn" type="submit">Send request</button>
 
-            <p class="micro">
-              This form is a placeholder for now. Next step: connect it to email or a form service.
-            </p>
-          </form>
+            <input type="hidden" name="_subject" value="New Black Tie Protection consultation request" />
+            </form>
+
         </div>
       </section>
     </main>

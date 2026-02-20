@@ -219,6 +219,10 @@ h1 {
   gap: 14px;
 }
 
+.card-cta {
+  margin-top: 14px;
+}
+
 .card {
   background: var(--panel);
   border: 1px solid var(--hairline);
@@ -319,4 +323,28 @@ input:focus, textarea:focus {
   .cards { grid-template-columns: 1fr; }
   .nav-links a:not(.btn) { display: none; }
   .form-row { grid-template-columns: 1fr; }
+}
+/* Mobile sticky CTA (only on small screens) */
+.mobile-cta {
+  display: none !important;
+}
+
+@media (max-width: 880px) {
+  .mobile-cta {
+    display: flex !important;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 12px 16px;
+    background: rgba(11, 13, 16, 0.78);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid var(--hairline);
+    z-index: 9999;
+    justify-content: center;
+  }
+
+  body {
+    padding-bottom: 76px;
+  }
 }
