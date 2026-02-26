@@ -79,11 +79,12 @@ a:hover { opacity: 0.9; }
 }
 
 .eyebrow {
-  color: var(--accent);
+  font-size: 14px;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 12px;
-  margin: 0 0 14px;
+  font-weight: 500;
+  color: rgba(243, 238, 228, 0.85);
+  margin-bottom: 10px;
 }
 
 h1 {
@@ -347,4 +348,199 @@ input:focus, textarea:focus {
   body {
     padding-bottom: 76px;
   }
+}
+/* Brand / Wordmark */
+
+.brand {
+    font-size: clamp(28px, 3vw, 40px);
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #f3eee4;
+    text-decoration: none;
+    line-height: 1;
+}
+
+.site-header {
+    padding: 26px 40px;
+}
+.container.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-links a {
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    margin-left: 28px;
+    color: #cfc8bb;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
+.nav-links a{
+  color: #cfc8bb;
+  text-decoration: none;
+  transition: opacity 160ms ease;
+  will-change: opacity;
+}
+
+.nav-links a:hover{
+  opacity: 0.7;
+}
+/* ================================
+   Contact / Request Availability
+================================ */
+
+#contact {
+  padding: 96px 0;
+}
+
+#contact .container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+#contact h2 {
+  font-size: 32px;
+;
+  margin-bottom: 8px;
+}
+
+#contact p {
+  color: rgba(243, 238, 228, 0.75);
+  margin-bottom: 28px;
+}
+
+/* Form panel */
+#contact form {
+  padding: 28px;
+  border-radius: 18px;
+  border: 1px solid rgba(243, 238, 228, 0.18);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Labels */
+#contact label {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(243, 238, 228, 0.7);
+}
+
+/* Inputs */
+#contact input,
+#contact textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(243, 238, 228, 0.18);
+  background: rgba(0, 0, 0, 0.25);
+  color: #f3eee4;
+  font-size: 16px;
+}
+
+#contact textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* Focus */
+#contact input:focus,
+#contact textarea:focus {
+  outline: none;
+  border-color: rgba(243, 238, 228, 0.45);
+}
+
+/* Submit button */
+#contact button,
+#contact input[type="submit"] {
+  margin-top: 8px;
+  align-self: flex-start;
+}
+/* Clean grid layout */
+#contact .form-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+#contact .field{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#contact .field--full{
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 760px){
+  #contact .form-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Textarea: less “giant slab”, more refined */
+#contact textarea{
+  min-height: 160px;
+  padding-top: 12px;
+}
+
+/* Button row */
+#contact .form-actions{
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-start; /* change to flex-end if you want it right aligned */
+}
+#contact textarea{
+  min-height: 130px;
+}
+#contact form{
+  border-color: rgba(243, 238, 228, 0.14);
+}
+#contact .form-actions{
+  justify-content: flex-end;
+}
+
+/* Services hero headline polish */
+.hero h1{
+  font-size: clamp(44px, 5vw, 64px);
+  line-height: 1.02;
+  letter-spacing: -0.02em;     /* tighter, more premium */
+  font-weight: 600;
+  text-transform: none;         /* keep Title Case (not ALL CAPS) */
+  max-width: 18ch;              /* stops it from looking “wide” */
+  margin: 12px 0 14px;
+}
+.hero{
+  padding-top: 72px;            /* gives the headline authority */
+}
+
+.hero .eyebrow{
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 12px;
+  opacity: 0.85;
+}
+.service-card{
+  transition: transform 180ms ease, border-color 180ms ease;
+}
+
+.service-card:hover{
+  transform: translateY(-2px);
+  border-color: rgba(243, 238, 228, 0.28);
+}
+/* Kill bottom divider on final section */
+.section:last-of-type {
+  border-bottom: none;
 }
