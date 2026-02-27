@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Black Tie Protection</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <div class="mobile-cta">
+  <a class="btn" href="index.html#contact">Request Consultation</a>
+</div>
+
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="#">Black Tie Protection</a>
+
+        <nav class="nav-links">
+          <a href="services.html">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact" class="btn btn--sm">Request Availability</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">Executive Protection • Michigan</p>
+            <h1>Security, Delivered with Restraint.</h1>
+            <p class="lead">
+              Close protection and risk management for clients who require Privacy, Precision, and Professional Discretion.
+            </p>
+
+            <div class="cta-row">
+              <a class="btn" href="#contact">Request Availability</a>
+              <a class="btn btn--ghost" href="#services">Explore Services</a>
+            </div>
+
+            <p class="micro">
+              Confidential consultation • Principled presence • Operational clarity
+            </p>
+          </div>
+
+          <div class="hero-card">
+            <div class="hero-card__top">
+              <p class="hero-card__label">At-a-glance</p>
+              <p class="hero-card__title">Client-first coverage</p>
+            </div>
+
+            <ul class="checklist">
+              <li>Advance & route planning</li>
+              <li>Venue sweeps & liaison coordination</li>
+              <li>Residential security presence</li>
+              <li>Travel days & movement coverage</li>
+            </ul>
+
+            <div class="hero-card__bottom">
+              <p class="hero-card__note">
+                Every assignment begins with a risk profile and a clear operating plan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Services</h2>
+            <p>Premium coverage designed for discretion, continuity, and control.</p>
+          </div>
+
+          <div class="cards">
+            <article class="card">
+              <h3>Executive Protection</h3>
+              <p>Discreet, close protection for daily life, public appearances, and sensitive events.</p>
+            </article>
+
+            <article class="card">
+              <h3>Travel & Movement</h3>
+              <p>Route planning, logistics coordination, and coverage for travel days and transitions.</p>
+            </article>
+
+            <article class="card">
+              <h3>Residential Presence</h3>
+              <p>Visible deterrence and calm oversight for residences, properties, and family routines.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section section--muted">
+        <div class="container split">
+          <div>
+            <h2>About</h2>
+            <p>
+              Black Tie Protection is built on discipline, preparation, and decisive action—without noise.
+              The mission is simple: reduce risk, preserve privacy, and keep clients moving forward.
+            </p>
+          </div>
+          <div class="panel">
+            <p class="panel-title">Operating principles</p>
+            <ul class="bullets">
+              <li>Low-profile by default</li>
+              <li>Threat-informed planning</li>
+              <li>Clear communication, no surprises</li>
+              <li>Professional boundaries and discretion</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Request availability</h2>
+            <p>Send a brief message. You’ll receive a confidential reply.</p>
+          </div>
+
+          <form class="form" action="https://formspree.io/f/xdalbvqp" method="POST">
+  <div class="form-grid">
+    <div class="field">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" placeholder="Your name" required>
+    </div>
+
+    <div class="field">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" placeholder="you@example.com" required>
+    </div>
+
+    <div class="field field--full">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="What dates, location, and coverage are you looking for?" required></textarea>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <button type="submit" class="btn">Send request</button>
+  </div>
+</form>
+
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-row">
+        <p>© <span id="year"></span> Black Tie Protection, LLC · Michigan </p>
+        <p class="micro">Discretion • Preparedness • Professionalism</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
