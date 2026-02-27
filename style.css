@@ -322,7 +322,6 @@ input:focus, textarea:focus {
 @media (max-width: 880px) {
   .hero-grid, .split { grid-template-columns: 1fr; }
   .cards { grid-template-columns: 1fr; }
-  .nav-links a:not(.btn) { display: none; }
   .form-row { grid-template-columns: 1fr; }
 }
 /* Mobile sticky CTA (only on small screens) */
