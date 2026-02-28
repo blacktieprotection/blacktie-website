@@ -692,20 +692,30 @@ input:focus, textarea:focus {
     transform: translateY(0);
   }
 }
-/* Smooth footer transition on Services page only */
-.services-page .footer {
-  background: #0a0c0f;
-  padding-top: 56px;
+/* SERVICES: premium anchored footer WITHOUT a color seam */
+.services-page .footer{
+  background: transparent;     /* key: no different background = no discoloration band */
   position: relative;
+  padding-top: 56px;
 }
 
-.services-page .footer::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -96px;            /* fade height (adjust 64–120px) */
-  height: 96px;
-  pointer-events: none;
-  background: linear-gradient(to bottom, transparent, #0a0c0f);
+/* subtle “anchored” darkening that blends upward */
+.services-page .footer::before{
+  content:"";
+  position:absolute;
+  left:0; right:0;
+  top:-140px;                 /* how far the blend reaches upward */
+  height:140px;
+  pointer-events:none;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0,0,0,0.28) 55%,
+    rgba(0,0,0,0.45)
+  );
+}
+
+/* optional: makes the footer feel grounded without changing the base color */
+.services-page .footer{
+  box-shadow: 0 -40px 80px rgba(0,0,0,0.35) inset;
 }
