@@ -704,8 +704,3 @@ input:focus, textarea:focus {
 .footer .container{
   padding-top: 18px;
 }
-/* DEBUG: temporarily kill section backgrounds to find the culprit */
-.section,
-.section--muted{
-  background: transparent !important;
-}
