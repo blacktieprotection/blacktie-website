@@ -23,10 +23,6 @@ body {
   color: var(--text);
   line-height: 1.55;
 }
-.footer {
-                background: #0a0c0f;
-                padding-top: 56px;
-              }
 
 a { color: inherit; text-decoration: none; }
 a:hover { opacity: 0.9; }
@@ -692,30 +688,24 @@ input:focus, textarea:focus {
     transform: translateY(0);
   }
 }
-/* SERVICES: premium anchored footer WITHOUT a color seam */
-.services-page .footer{
-  background: transparent;     /* key: no different background = no discoloration band */
-  position: relative;
-  padding-top: 56px;
+/* ===== Footer: premium + no discoloration band ===== */
+.footer{
+  background: transparent;         /* let the page background show through */
+  padding: 28px 0 44px;
+  border-top: 1px solid var(--hairline);
 }
 
-/* subtle “anchored” darkening that blends upward */
-.services-page .footer::before{
-  content:"";
-  position:absolute;
-  left:0; right:0;
-  top:-140px;                 /* how far the blend reaches upward */
-  height:140px;
-  pointer-events:none;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(0,0,0,0.28) 55%,
-    rgba(0,0,0,0.45)
-  );
+.footer-row{
+  border-top: 0;                   /* prevent “double line” if you already have one */
+  padding-top: 0;
 }
 
-/* optional: makes the footer feel grounded without changing the base color */
-.services-page .footer{
-  box-shadow: 0 -40px 80px rgba(0,0,0,0.35) inset;
+/* If your footer content needs spacing, do it here */
+.footer .container{
+  padding-top: 18px;
+}
+/* DEBUG: temporarily kill section backgrounds to find the culprit */
+.section,
+.section--muted{
+  background: transparent !important;
 }
