@@ -692,3 +692,20 @@ input:focus, textarea:focus {
     transform: translateY(0);
   }
 }
+/* Smooth footer transition on Services page only */
+.services-page .footer {
+  background: #0a0c0f;
+  padding-top: 56px;
+  position: relative;
+}
+
+.services-page .footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -96px;            /* fade height (adjust 64–120px) */
+  height: 96px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent, #0a0c0f);
+}
