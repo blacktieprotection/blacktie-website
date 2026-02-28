@@ -8,6 +8,30 @@
   </head>
 
   <body>
+    <!-- MOBILE HEADER (mobile only) -->
+<header class="mobile-header">
+  <div class="mobile-header__container">
+    <a class="mobile-logo" href="index.html">Black Tie Protection</a>
+
+    <button
+      class="mobile-menu-toggle"
+      id="mobile-menu-toggle"
+      aria-label="Open menu"
+      aria-expanded="false"
+      type="button"
+    >
+      <span aria-hidden="true">≡</span>
+    </button>
+  </div>
+</header>
+
+<!-- MOBILE MENU (mobile only) -->
+<nav class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <a href="services.html">Services</a>
+  <a href="index.html#about">About</a>
+  <a href="index.html#contact" class="mobile-menu__cta">Request Availability</a>
+</nav>
+
      <header class="site-header">
       <div class="container nav">
         <a class="brand" href="index.html">Black Tie Protection</a>
@@ -144,6 +168,28 @@
         <p class="micro">Discretion • Preparedness • Professionalism</p>
       </div>
     </footer>
+
+<script>
+  const btn = document.getElementById("mobile-menu-toggle");
+  const menu = document.getElementById("mobile-menu");
+
+  if (btn && menu) {
+    btn.addEventListener("click", () => {
+      const isOpen = menu.classList.toggle("is-open");
+      btn.setAttribute("aria-expanded", String(isOpen));
+      menu.setAttribute("aria-hidden", String(!isOpen));
+    });
+
+    // Close menu when you click a link
+    menu.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", () => {
+        menu.classList.remove("is-open");
+        btn.setAttribute("aria-expanded", "false");
+        menu.setAttribute("aria-hidden", "true");
+      });
+    });
+  }
+</script>
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();

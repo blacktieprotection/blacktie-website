@@ -602,15 +602,15 @@ input:focus, textarea:focus {
     position: sticky;
     top: 0;
     z-index: 2000;
-    background: rgba(11, 13, 16, 0.88);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(11, 13, 16, 0.92);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--hairline);
   }
 
   .mobile-header__container {
-    height: 64px;
-    width: min(1100px, calc(100% - 48px));
+    height: 86px;
+    width: min(1100px, calc(100% - 40px));
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -618,29 +618,31 @@ input:focus, textarea:focus {
   }
 
   .mobile-logo {
-    font-size: 14px;
-    letter-spacing: 0.22em;
+    font-size: 16px;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: rgba(243, 238, 228, 0.92);
+    line-height: 1.1;
   }
 
   .mobile-menu-toggle {
-    width: 44px;
-    height: 44px;
+    width: 56px;
+    height: 56px;
     border-radius: 999px;
     border: 1px solid var(--hairline);
-    background: rgba(255,255,255,0.04);
+    background: rgba(255,255,255,0.05);
     color: var(--text);
     display: inline-flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    font-size: 22px;
   }
 
   /* Menu panel */
   .mobile-menu {
     position: sticky;
-    top: 64px; /* sits under the header */
+    top: 86px; /* sits under the header */
     z-index: 1900;
     background: rgba(17, 21, 27, 0.96);
     border-bottom: 1px solid var(--hairline);
