@@ -6,6 +6,7 @@
   <meta name="description" content="Black Tie Protection website privacy notice." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://blacktieprotection.net/privacy.html" />
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
   <title>Privacy Notice | Black Tie Protection</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,14 +16,26 @@
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
 
+  <div class="status-bar" role="status">
+    <div class="container status-bar__inner">
+      <span class="status-bar__label">Development Status</span>
+      <span>Black Tie Protection is preparing for a controlled future launch and is not currently accepting protective engagements.</span>
+    </div>
+  </div>
+
   <header class="site-header">
     <div class="container nav">
-      <a class="brand" href="index.html" aria-label="Black Tie Protection home">
-        <span class="brand-primary">Black Tie</span>
-        <span class="brand-secondary">Protection</span>
+      <a class="brand brand--image" href="index.html" aria-label="Black Tie Protection home">
+        <img src="assets/btp-wordmark-white.png" alt="Black Tie Protection" />
       </a>
-      <nav class="nav-links" aria-label="Primary navigation">
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-controls="site-nav" aria-expanded="false" type="button">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links" id="site-nav" aria-label="Primary navigation">
         <a href="services.html">Services</a>
+        <a href="index.html#approach">Approach</a>
         <a href="index.html#about">About</a>
         <a href="index.html#contact" class="btn btn--sm">Private Inquiry</a>
       </nav>
@@ -71,7 +84,9 @@
   <footer class="footer">
     <div class="container footer-grid">
       <div>
-        <a class="footer-brand" href="index.html">Black Tie Protection</a>
+        <a class="footer-brand footer-brand--image" href="index.html" aria-label="Black Tie Protection home">
+          <img src="assets/btp-wordmark-white.png" alt="Black Tie Protection" />
+        </a>
         <p class="micro">Michigan · Executive Protection Firm in Development</p>
       </div>
       <div class="footer-links">
@@ -87,6 +102,29 @@
     </div>
   </footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('site-nav');
+
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        const open = nav.classList.toggle('is-open');
+        toggle.classList.toggle('is-open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+      });
+
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('is-open');
+          toggle.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.setAttribute('aria-label', 'Open navigation');
+        });
+      });
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
